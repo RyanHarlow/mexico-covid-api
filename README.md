@@ -1,0 +1,1 @@
+Data obtained from https://serendipia.digital/2020/03/datos-abiertos-sobre-casos-de-coronavirus-covid-19-en-mexico/

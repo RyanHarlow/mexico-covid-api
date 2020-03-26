@@ -1,0 +1,17 @@
+{
+  "name": "mexico-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js --ignore 'data.json'"
+  },
+  "author": "Ryan Harlow",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^4.8.8",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

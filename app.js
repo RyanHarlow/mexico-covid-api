@@ -5,8 +5,7 @@ const PORT = process.env.PORT || 3000;
 const parseData = require('./utils/parseData');
 const fs = require('fs')
 const stateMap = require('./utils/stateMapping');
-
-
+const root = require('path').join(__dirname, 'client', 'build')
 
 
 parseData.parseData();
@@ -43,10 +42,12 @@ for(var i = 0; i < geojson.features.length; i++){
      geojson.features[i].properties.totalCases = stateTotal[name];
 }
 
-
-app.get('/', (req, res) => {
-    res.redirect('https://github.com/RyanHarlow/mexico-covid-api')
+app.use(express.static(root));
+app.get("/", (req, res) => {
+    res.sendFile('index.html', { root });
 })
+
+
 
 app.get('/api', (req, res) => {
     res.redirect('https://github.com/RyanHarlow/mexico-covid-api')

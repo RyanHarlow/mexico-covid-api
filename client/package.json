@@ -2,11 +2,13 @@
   "name": "mexico-covid-map",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
+    "bulma": "^0.8.1",
     "d3-array": "^2.4.0",
     "d3-request": "^1.0.6",
     "d3-scale": "^3.2.1",

@@ -12,5 +12,10 @@
     return cases and total for a particular state. state code is a two letter code defined in ./utils/stateMapping
 
 
+data is ususally updated at 8pm CST
 
-Data obtained from https://serendipia.digital/2020/03/datos-abiertos-sobre-casos-de-coronavirus-covid-19-en-mexico/
+Data obtained from 
+
+https://serendipia.digital/2020/03/datos-abiertos-sobre-casos-de-coronavirus-covid-19-en-mexico/
+
+gob.mx/salud

@@ -4,6 +4,7 @@ import Map from './components/Map';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import 'bulma/css/bulma.css'
 import Header from './components/Header'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Map />
+      <Footer />
     </div>
   );
 }

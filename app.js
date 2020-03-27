@@ -1,4 +1,5 @@
 const express = require('express');
+var cors = require('cors');
 require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -6,7 +7,7 @@ const parseData = require('./utils/parseData');
 const fs = require('fs')
 const stateMap = require('./utils/stateMapping');
 const root = require('path').join(__dirname, 'client', 'build')
-
+app.use(cors());
 
 parseData.parseData();
 let spanishData = JSON.parse(fs.readFileSync("data.json", "utf8"));

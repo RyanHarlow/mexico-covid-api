@@ -6,7 +6,7 @@ function Header(props){
     <div className='container'>
   <div className="navbar-brand">
   <a className="navbar-item" href="https://bulma.io">
-  <h3 style={{color: 'white'}} class="title is-3">Coronavirus Tracker Mexico</h3>
+  <h3 style={{color: 'white', fontSize:'15px'}} class="title is-3">Coronavirus Tracker Mexico</h3>
     </a>
   </div>
   </div>

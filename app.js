@@ -28,11 +28,11 @@ for(var i = 0; i < spanishData.length; i++){
 
 
 app.get('/', (req, res) => {
-    res.redirect('http://github.com/ryanharlow')
+    res.redirect('https://github.com/RyanHarlow/mexico-covid-api')
 })
 
 app.get('/api', (req, res) => {
-    res.redirect('http://github.com/ryanharlow')
+    res.redirect('https://github.com/RyanHarlow/mexico-covid-api')
 })
 
 app.get('/api/all', (req, res) => {

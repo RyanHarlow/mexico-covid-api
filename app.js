@@ -4,6 +4,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const parseData = require('./utils/parseData');
 const fs = require('fs')
+const stateMap = require('./utils/stateMapping');
+
+
 
 
 parseData.parseData();
@@ -51,9 +54,9 @@ app.get('/api/total', (req, res) => {
         }
         ageCount += Number(data[i].age);
         if(returnObj.states[data[i].state]){
-            returnObj.states[data[i].state]++;
+            returnObj.states[data[i].state].totalCases++;
         }else{
-            returnObj.states = {...returnObj.states, [data[i].state]: 1};
+            returnObj.states = {...returnObj.states, [data[i].state]: {code: stateMap[data[i].state], totalCases: 1}};
         }
     }
     let averageAge = ageCount/totalCases;
@@ -61,7 +64,29 @@ app.get('/api/total', (req, res) => {
     res.json(returnObj)
 })
 
-
+app.get('/api/state/:state', (req, res) => {
+    let stateCode = req.params.state.toUpperCase();
+    let stateName = Object.keys(stateMap).find(key => stateMap[key] === stateCode);
+    let total = {totalCases: 0, totalM: 0, totalF: 0};
+    let cases= [];
+    for(let i = 0; i < data.length; i++){
+        if(data[i].state == stateName){
+            cases.push(data[i]);
+            total.totalCases++;
+            if(data[i].sex == 'M'){
+                total.totalM++;
+            }else if(data[i].sex == 'F'){
+                total.totalF++;
+            }
+        }
+    }
+    res.json({
+        stateName,
+        stateCode,
+        total,
+        cases
+    });
+})
 
 
 

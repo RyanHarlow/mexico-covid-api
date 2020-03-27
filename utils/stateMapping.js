@@ -5,7 +5,7 @@ module.exports = {
     'CAMPECHE': 'CM',
     'CHIAPAS': 'CS',
     'CHIHUAHUA': 'CH',
-    'COAHUILA"': 'CO',
+    'COAHUILA': 'CO',
     'COLIMA': 'CL',
     'DURANGO': 'DG',
     'GUANAJUATO': 'GT',

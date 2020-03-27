@@ -26,6 +26,23 @@ for(var i = 0; i < spanishData.length; i++){
     })
 }
 
+let stateTotal = {};
+
+for(var i = 0; i < data.length; i++){
+    if(stateTotal[data[i].state]){
+        stateTotal[data[i].state]++;
+    }else{
+        stateTotal[data[i].state] = 1;
+    }
+}
+
+
+let geojson = JSON.parse(fs.readFileSync("geo.json", "utf8"));
+for(var i = 0; i < geojson.features.length; i++){
+    let name = geojson.features[i].properties.name.toUpperCase();
+     geojson.features[i].properties.totalCases = stateTotal[name];
+}
+
 
 app.get('/', (req, res) => {
     res.redirect('https://github.com/RyanHarlow/mexico-covid-api')
@@ -94,8 +111,9 @@ app.get('/api/state/:state', (req, res) => {
     });
 })
 
-
-
+app.get('/api/geojson', (req, res) => {
+   res.json(geojson)
+})
 
 app.listen(PORT, () => {
     console.log(`app listening on port ${PORT}`)

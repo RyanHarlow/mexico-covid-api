@@ -1,5 +1,8 @@
 # Documentation
 
+## Base URL
+    https://covmx.xyz
+
 ## Endpoints
 
 * /api

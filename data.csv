@@ -1,4 +1,4 @@
-numCaso,estado,sexo,edad,fechaDeInicioDeSintomas,isConfirmado,procedencia,fechaDelLLegadaAMexico
+N° Caso,Estado,Sexo,Edad,Fecha de Inicio de síntomas,Identificación de COVID-19 por RT-PCR en tiempo real,Procedencia,Fecha del llegada a México
 1,CIUDAD DE MÉXICO,M,35,22/02/2020,confirmado,Italia,22/02/2020
 2,SINALOA,M,41,22/02/2020,confirmado,Italia,21/02/2020
 3,CIUDAD DE MÉXICO,M,59,23/02/2020,confirmado,Italia,22/02/2020
@@ -474,5 +474,4 @@ numCaso,estado,sexo,edad,fechaDeInicioDeSintomas,isConfirmado,procedencia,fechaD
 473,NAYARIT,M,53,24/03/2020,confirmado,Contacto,24/03/2020
 474,MICHOACÁN,F,62,15/03/2020,confirmado,Contacto,15/03/2020
 475,YUCATÁN,M,53,19/03/2020,confirmado,Contacto,12/03/2020
-"Fuente: SINAVE/DGE/InDRE F: Femenino M: Masculino
-Corte: 25 de Marzo del 2020 a las 13:00 horas",,,,,,,
+2020/03/25 13:00,,,,,,,

@@ -11,31 +11,32 @@ const stateMap = require('./utils/stateMapping');
 
 parseData.parseData();
 let spanishData = JSON.parse(fs.readFileSync("data.json", "utf8"));
-let updatedAt = spanishData.pop().numCaso
-updatedAt = updatedAt.substring(updatedAt.indexOf('Corte:') + 7, updatedAt.indexOf('Corte:') + 39);
+let updated = spanishData.pop()['N° Caso'];
 let data = [];
 for(var i = 0; i < spanishData.length; i++){
     data.push({
-        numCase: spanishData[i].numCaso,
-        sex: spanishData[i].sexo,
-        age: spanishData[i].edad,
-        dateOfInitialSymptoms: spanishData[i].fechaDeInicioDeSintomas,
-        isConfirmed: spanishData[i].isConfirmado,
-        origin: spanishData[i].procedencia,
-        dateArrivedInMexico: spanishData[i].fechaDelLLegadaAMexico,
-        state: spanishData[i].estado
+        numCase: spanishData[i]['N° Caso'],
+        sex: spanishData[i]['Sexo'],
+        age: spanishData[i]['Edad'],
+        dateOfInitialSymptoms: spanishData[i]['Fecha de Inicio de síntomas'],
+        isConfirmed: spanishData[i]['Identificación de COVID-19 por RT-PCR en tiempo real'],
+        origin: spanishData[i]['Procedencia'],
+        dateArrivedInMexico: spanishData[i]['Fecha del llegada a México'],
+        state: spanishData[i]['Estado']
     })
 }
-
-
 
 
 app.get('/', (req, res) => {
     res.redirect('http://github.com/ryanharlow')
 })
 
+app.get('/api', (req, res) => {
+    res.redirect('http://github.com/ryanharlow')
+})
+
 app.get('/api/all', (req, res) => {
-    res.json(data);
+    res.json({updated,cases:[...data]});
 })
 
 
@@ -61,7 +62,7 @@ app.get('/api/total', (req, res) => {
     }
     let averageAge = ageCount/totalCases;
     returnObj = {totalCases,totalM, totalF, averageAge, ...returnObj}
-    res.json(returnObj)
+    res.json({updated, ...returnObj})
 })
 
 app.get('/api/state/:state', (req, res) => {
@@ -69,8 +70,10 @@ app.get('/api/state/:state', (req, res) => {
     let stateName = Object.keys(stateMap).find(key => stateMap[key] === stateCode);
     let total = {totalCases: 0, totalM: 0, totalF: 0};
     let cases= [];
+    let ageCount = 0;
     for(let i = 0; i < data.length; i++){
         if(data[i].state == stateName){
+            ageCount += Number(data[i].age);
             cases.push(data[i]);
             total.totalCases++;
             if(data[i].sex == 'M'){
@@ -80,7 +83,10 @@ app.get('/api/state/:state', (req, res) => {
             }
         }
     }
+    let averageAge = ageCount/cases.length;
+    total.averageAge = averageAge;
     res.json({
+        updated,
         stateName,
         stateCode,
         total,

@@ -56,6 +56,7 @@ class Map extends Component{
         <div className="tooltip" style={{left: x, top: y, margin:'1em', fontSize:'20px', backgroundColor: 'white', display:'inline-block', padding: '1rem', border:'1px solid black', borderRadius:'1em'}}>
           <div>State: {clickedFeature.properties.name}</div>
           <div>Number Of Cases: {clickedFeature.properties.totalCases}</div>
+          <div>Number Of Deaths: {clickedFeature.properties.totalDeaths}</div>
         </div>
       )
     );

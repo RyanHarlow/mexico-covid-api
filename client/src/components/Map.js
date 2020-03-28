@@ -53,7 +53,7 @@ class Map extends Component{
 
     return (
       clickedFeature && (
-        <div className="tooltip" style={{left: x, top: y, margin:'1em', fontSize:'20px'}}>
+        <div className="tooltip" style={{left: x, top: y, margin:'1em', fontSize:'20px', backgroundColor: 'white', display:'inline-block', padding: '1rem', border:'1px solid black', borderRadius:'1em'}}>
           <div>State: {clickedFeature.properties.name}</div>
           <div>Number Of Cases: {clickedFeature.properties.totalCases}</div>
         </div>
@@ -70,7 +70,7 @@ class Map extends Component{
           {...viewport}
           width="100vw"
           height="80vh"
-          mapStyle="mapbox://styles/mapbox/light-v9"
+          mapStyle="mapbox://styles/mapbox/dark-v9"
           onViewportChange={this._onViewportChange}
           mapboxApiAccessToken={MAPBOX_TOKEN}
           onClick={this._onClick}

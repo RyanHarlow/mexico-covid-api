@@ -8,6 +8,7 @@ function Footer(props){
       <strong style={{color:'white'}}>COV MX</strong> by Ryan Harlow. The website and source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
     </p>
     <p>API documentation can be found <a href='https://github.com/RyanHarlow/mexico-covid-api'>Here</a></p>
+    <p>Data obtained from the <a href='https://www.gob.mx/salud'>Secretaria de Salud</a></p>
   </div>
 </footer>
     )

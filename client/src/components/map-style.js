@@ -5,7 +5,7 @@ export const dataLayer = {
     'fill-color': {
       property: 'percentile',
       stops: [
-        [0, 'rgba(255, 255, 0, .5)'],
+        [0, 'rgba(255, 255, 0, 0)'],
         [1, 'rgba(255, 223, 0, .5)'],
         [2, 'rgba(255, 191, 0, .5)'],
         [3, 'rgba(255, 159, 0, .5)'],

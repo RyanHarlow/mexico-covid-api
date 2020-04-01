@@ -10,7 +10,7 @@ module.exports = {
     'DURANGO': 1,
     'GUANAJUATO': 0,
     'GUERRERO': 0,
-    'HIDALGO': 2,
+    'HIDALGO': 3,
     'JALISCO': 3,
     'MÉXICO': 1,
     'CIUDAD DE MÉXICO': 8,

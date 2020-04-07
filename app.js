@@ -43,6 +43,8 @@ for(var i = 0; i < data.length; i++){
 }
 
 
+
+
 let geojson = JSON.parse(fs.readFileSync("geo.json", "utf8"));
 for(var i = 0; i < geojson.features.length; i++){
     let name = geojson.features[i].properties.name.toUpperCase();

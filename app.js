@@ -22,10 +22,11 @@ for(var i = 0; i < spanishData.length; i++){
         dateOfInitialSymptoms: spanishData[i]['Fecha de Inicio de síntomas'],
         isConfirmed: spanishData[i]['Identificación de COVID-19 por RT-PCR en tiempo real'],
         origin: spanishData[i]['Procedencia'],
-        dateArrivedInMexico: spanishData[i]['Fecha del llegada a México'],
         state: spanishData[i]['Estado']
     })
 }
+
+console.log(data)
 
 let stateTotal = {};
 
@@ -81,9 +82,9 @@ app.get('/api/total', (req, res) => {
     let totalM = 0;
     let ageCount = 0;
     for(let i = 0; i < data.length; i++){
-        if(data[i].sex == 'F'){
+        if(data[i].sex == 'FEMENINO'){
             totalF++;
-        }if(data[i].sex == 'M'){
+        }if(data[i].sex == 'MASCULINO'){
             totalM++;
         }
         ageCount += Number(data[i].age);
@@ -109,9 +110,9 @@ app.get('/api/state/:state', (req, res) => {
             ageCount += Number(data[i].age);
             cases.push(data[i]);
             total.totalCases++;
-            if(data[i].sex == 'M'){
+            if(data[i].sex == 'MASCULINO'){
                 total.totalM++;
-            }else if(data[i].sex == 'F'){
+            }else if(data[i].sex == 'FEMENINO'){
                 total.totalF++;
             }
         }

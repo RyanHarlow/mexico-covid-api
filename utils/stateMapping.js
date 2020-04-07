@@ -12,12 +12,12 @@ module.exports = {
     'GUERRERO': 'GR',
     'HIDALGO': 'HG',
     'JALISCO': 'JA',
-    'MÉXICO': 'EM',
-    'CIUDAD DE MÉXICO': 'DF',
-    'MICHOACÁN': 'MI',
+    'MEXICO': 'EM',
+    'DISTRITO FEDERAL': 'DF',
+    'MICHOACAN': 'MI',
     'MORELOS': 'MO',
     'NAYARIT': 'NA',
-    'NUEVO LEÓN': 'NL',
+    'NUEVO LEON': 'NL',
     'OAXACA': 'OA',
     'PUEBLA': 'PU',
     'QUERETARO': 'QT',
@@ -29,7 +29,7 @@ module.exports = {
     'TAMAULIPAS': 'TM',
     'TLAXCALA': 'TL',
     'VERACRUZ': 'VE',
-    'YUCATÁN': 'YU',
+    'YUCATAN': 'YU',
     'ZACATECAS': 'ZA'
 }
 

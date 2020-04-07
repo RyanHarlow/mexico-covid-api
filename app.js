@@ -26,7 +26,6 @@ for(var i = 0; i < spanishData.length; i++){
     })
 }
 
-console.log(data)
 
 let stateTotal = {};
 

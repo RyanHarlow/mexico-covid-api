@@ -22,7 +22,7 @@ module.exports = {
     'PUEBLA': 'PU',
     'QUERETARO': 'QT',
     'QUINTANA ROO': 'QR',
-    'SAN LUIS POTOSÍ': 'SL',
+    'SAN LUIS POTOSI': 'SL',
     'SINALOA': 'SI',
     'SONORA': 'SO',
     'TABASCO': 'TB',

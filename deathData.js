@@ -13,7 +13,7 @@ module.exports = {
     'HIDALGO': 5,
     'JALISCO': 7,
     'MEXICO': 8,
-    'DISTRITIO FEDERAL': 29,
+    'DISTRITO FEDERAL': 29,
     'MICHOACAN': 3,
     'MORELOS': 3,
     'NAYARIT': 1,

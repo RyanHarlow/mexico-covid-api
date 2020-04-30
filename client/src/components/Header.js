@@ -30,6 +30,7 @@ function Header(props) {
   <p>Total Cases: {totalCases}</p>
         </div>
       </div>
+      <h2>Please Note: Data no longer updated please go <a href='https://covid19.sinave.gob.mx/'>here</a> for updated data</h2>
     </nav>
   );
 }
